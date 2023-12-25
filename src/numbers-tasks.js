@@ -289,12 +289,12 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits() {
-  let num;
-  let sum;
-  while (num) {
-    sum += num % 10;
-    num = Math.floor(num / 10);
+function getSumOfDigits(num) {
+  let sum = 0;
+  let digitNumber = num;
+  while (digitNumber) {
+    sum += digitNumber % 10;
+    digitNumber = Math.floor(digitNumber / 10);
   }
   return sum;
 }
