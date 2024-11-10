@@ -255,8 +255,9 @@ function getCube(num) {
  *   3  => 2
  *   10 => 55
  */
-function getFibonacciNumber(/* index */) {
-  throw new Error('Not implemented');
+function getFibonacciNumber(n) {
+  if (n <= 1) return n;
+  return getFibonacciNumber(n - 1) + getFibonacciNumber(n - 2);
 }
 
 /**
@@ -310,8 +311,11 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  if (num % 2 === 0) {
+    return true;
+  }
+  return false;
 }
 
 /**
